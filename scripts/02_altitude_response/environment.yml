@@ -1,0 +1,28 @@
+name: deg
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - scipy
+  - statsmodels
+  - openpyxl
+  - requests
+  - pyyaml
+  - r-base=4.5
+  - r-data.table
+  - r-readxl
+  - r-ggplot2
+  - r-optparse
+  - r-jsonlite
+  - r-statmod
+  - bioconductor-edger
+  - bioconductor-limma
+  - bioconductor-geoquery
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - bioconductor-biomart
+  - bioconductor-fgsea
+  - bioconductor-sva

@@ -275,3 +275,7 @@ The vendored third-party tools used by stage 01 (MR-JTI, MetaXcan, SMR) are not
 redistributed in this repository; they are cited in the manuscript references and are
 publicly available from their original repositories. No other third-party software is
 required beyond the environments listed above.
+
+## License
+
+The code in this repository is licensed under the MIT License; see `LICENSE`.

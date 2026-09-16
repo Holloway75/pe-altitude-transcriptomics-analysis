@@ -1,0 +1,45 @@
+{
+  "analysis_id": "m3_exploratory_shared_programs_v5_20260729",
+  "analysis_class": "post_hoc_exploratory_after_v4_negative",
+  "formal_alt_axis": "ALT_GSE103927_ALT16_TOTAL",
+  "context_alt_axis": "ALT_GSE333506_HAN_WEEK4_TOTAL",
+  "gene_universe_rule": "one-to-one current HGNC intersection of frozen PE Whole Blood JTI and GSE103927",
+  "strict_alt_fdr_max": 0.05,
+  "strict_alt_abs_log2fc_min": 0.5,
+  "strict_pe_q_max": 0.05,
+  "tail_fraction": 0.05,
+  "sign_flip_draws": 100000,
+  "sign_flip_seed": 20260729,
+  "monte_carlo_chunk_size": 250,
+  "null_ranking_statistic": "limma moderated t recomputed after each donor sign flip with the observed empirical-Bayes hyperparameters frozen gene-wise",
+  "primary_multiplicity": "Holm adjustment across four empirical quadrant P values",
+  "reference_multiplicity": "Holm adjustment across four one-sided Fisher P values",
+  "signature_multiplicity": "BH adjustment across the frozen compact signature panel",
+  "signature_minimum_universe_genes": 5,
+  "compact_signatures": [
+    "HALLMARK_HYPOXIA",
+    "REACTOME_CELLULAR_RESPONSE_TO_HYPOXIA",
+    "HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY",
+    "REACTOME_DETOXIFICATION_OF_REACTIVE_OXYGEN_SPECIES",
+    "REACTOME_SIGNALING_BY_ERYTHROPOIETIN",
+    "HALLMARK_ANGIOGENESIS"
+  ],
+  "pre_execution_signature_exclusions": [
+    {
+      "signature_id": "REACTOME_REGULATION_OF_GENE_EXPRESSION_BY_HYPOXIA_INDUCIBLE_FACTOR",
+      "universe_genes": 4,
+      "reason": "EXCLUDED_LT5_UNIVERSE_GENES"
+    },
+    {
+      "signature_id": "REACTOME_ERYTHROCYTES_TAKE_UP_OXYGEN_AND_RELEASE_CARBON_DIOXIDE",
+      "universe_genes": 1,
+      "reason": "EXCLUDED_LT5_UNIVERSE_GENES"
+    }
+  ],
+  "interpretation_contract": {
+    "v4_conclusion_unchanged": true,
+    "causal_altitude_to_pe_claim_allowed": false,
+    "independent_replication_claim_allowed": false,
+    "candidate_trigger": "at least one primary empirical Holm-adjusted P < 0.05"
+  }
+}

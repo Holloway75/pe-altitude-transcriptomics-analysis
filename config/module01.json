@@ -1,0 +1,27 @@
+{
+  "schema_version": "M1.3",
+  "capability_level": "complete",
+  "random_seed": 20260714,
+  "candidate_rules": {
+    "tissue": {"id": "tissue_global_bh_q05_v1", "q_max": 0.05},
+    "cross_tissue": {"id": "cross_tissue_bh_q05_v1", "q_max": 0.05}
+  },
+  "qc": {
+    "z_absolute_tolerance": 1e-10,
+    "minimum_model_match_rate": 0.20,
+    "primary_relative_match_rate": 0.80,
+    "direction_audit_per_status": 100
+  },
+  "cross_tissue": {
+    "standard_method": "S-MultiXcan",
+    "fallback_method": "GLS",
+    "standard_status": "success",
+    "fallback_status": "not_applicable",
+    "reason": "Outcome-free 20-gene covariance/interface smoke passed; the formal path invokes the frozen SMulTiXcan core with eigen-ratio 1e-6."
+  },
+  "resources": {
+    "gene_annotation": "${EXTERNAL_DATA_ROOT}/annotations/gencode_hg19_gene_annotation.tsv.gz",
+    "european_ld_blocks": "${EXTERNAL_DATA_ROOT}/1kGenome/hg19_eur_ld_blocks/blocks.tsv",
+    "complex_regions": "${EXTERNAL_DATA_ROOT}/annotations/hg19_complex_ld_regions.bed"
+  }
+}

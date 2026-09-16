@@ -84,7 +84,12 @@ def main():
         row["mrjti_family_size"] = family_size
         row["mrjti_family_alpha"] = format(family_alpha, ".17g")
         row["pvalue"] = row["q_mrjti"] = NA
-        if row["status"] == "success_inference_descriptive":
+        # The global-BH runner (`run_global_bh_mrjti.py`) may already have
+        # inline-enriched these rows (status success_inference_bonferroni_
+        # selection_dependent, 15-digit R CI text).  Both success statuses are
+        # recomputed here from the frozen bootstrap draws so the output is the
+        # canonical v3 layer (.17g CIs, native Bonferroni alpha) either way.
+        if row["status"] in ("success_inference_descriptive", "success_inference_bonferroni_selection_dependent"):
             draws = [float(x["expression_beta"]) for x in read_tsv(task_dir / "bootstrap.tsv")]
             result_path = task_dir / "mrjti-result.tsv"
             result = read_tsv(result_path)[0]

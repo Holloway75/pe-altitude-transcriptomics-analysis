@@ -1,0 +1,5 @@
+dataset_id	phenotype	cases	controls	analysis_role	source_build	preprocess_mode	input_relpath	hg19_relpath	local_status
+FIGSHARE_22680904_v2	PE/eclampsia	16349	595135	primary	hg38,hg19	figshare_metal	FIGSHARE_22680904_v2/raw/metal_preec_European_allBiobanks_omitNone_1.txt.gz	FIGSHARE_22680904_v2/hg19/FIGSHARE_22680904_v2.hg19.tsv.gz	ready
+GCST90454233	ICD-10 O14 pre-eclampsia	6643	286099	phenotype_sensitivity	hg38,hg19	gwas_catalog_harmonized	GCST90454233/hg38/GCST90454233.h.tsv.gz	GCST90454233/hg19/GCST90454233.h.hg19.tsv.gz	ready
+GCST90269904	PE or other maternal hypertension, maternal genotype effect	15200	115007	broad_sensitivity	hg38,hg19	gwas_catalog_harmonized	GCST90269904/hg38/GCST90269904.h.tsv.gz	GCST90269904/hg19/GCST90269904.h.hg19.tsv.gz	ready
+GCST90301704	Preeclampsia, UK Biobank	1728	192399	low_power_exploratory	hg38,hg19	gwas_catalog_harmonized	GCST90301704/hg38/GCST90301704.h.tsv.gz	GCST90301704/hg19/GCST90301704.h.hg19.tsv.gz	ready
